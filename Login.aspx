@@ -1,52 +1,57 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head>
     <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!-- bootstrap-css -->
-    <link rel="stylesheet" href="src/css/bootstrap.min.css" >
-    <!-- //bootstrap-css -->
-    <!-- Custom CSS -->
-    <link href="src/css/style.css" rel='stylesheet' type='text/css' />
-    <link href="src/css/style-responsive.css" rel="stylesheet"/>
-    <!-- font CSS -->
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <!-- font-awesome icons -->
-    <link rel="stylesheet" href="src/css/font.css" type="text/css"/>
-    <link href="src/css/font-awesome.css" rel="stylesheet"> 
-    <!-- //font-awesome icons -->
-    <script src="src/js/jquery2.0.3.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Bootstrap Advance Admin Template</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="src1/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="src1/css/font-awesome.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
-<body>
-    <div class="log-w3">
-        <div class="w3layouts-main">
-	        <h2>Sign In Now</h2>
-		        <form id="form1" runat="server">
-                    <asp:TextBox ID="TextBox1" runat="server" class="ggg" placeholder="E-MAIL"></asp:TextBox>
-                    <asp:TextBox ID="TextBox2" runat="server" class="ggg" placeholder="PASSWORD"></asp:TextBox>
-			        <span><input type="checkbox" />Remember Me</span>
-			        <h6><a href="#">Forgot Password?</a></h6>
-				        <div class="clearfix"></div>
-                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-                        <asp:Button ID="Button1" runat="server" Text="Sign In" 
-                        onclick="Button1_Click" />
-		        </form>
-		        <p>Don't Have an Account ?<a href="registration.html">Create an account</a></p>
+<body style="background-color: #E2E2E2;">
+    <div class="container">
+        <div class="row text-center " style="padding-top: 50px;">
+            <div class="col-md-12">
+                <h1>
+                    Log In</h1>
+                </h1>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                <div class="panel-body">
+                    <form id="form1" runat="server">
+                    <hr />
+                    <h5>
+                        Enter Details to Login</h5>
+                    <br />
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-tag"></i></span>
+                        <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="USERNAME"></asp:TextBox>
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="PASSWORD"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" />
+                            Remember me
+                        </label>
+                    </div>
+                    <asp:Button ID="Button2" runat="server" Text="Sign In" OnClick="Button1_Click" class="btn btn-primary " />
+                    <hr />
+                    Not register ? <a href="Register.aspx">click here </a>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="src/js/bootstrap.js"></script>
-    <script src="src/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="src/js/scripts.js"></script>
-    <script src="src/js/jquery.slimscroll.js"></script>
-    <script src="src/js/jquery.nicescroll.js"></script>
-    <script src="src/js/jquery.scrollTo.js"></script>
 </body>
 </html>

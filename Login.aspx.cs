@@ -13,6 +13,10 @@ public partial class Login : System.Web.UI.Page
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString1"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["email"] != null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
         //DeleteCommand="DELETE FROM [users] WHERE [id] = @id" 
         //InsertCommand="INSERT INTO [users] ([fullname], [email], [password]) VALUES (@fullname, @email, @password)" 
         //ProviderName="<%$ ConnectionStrings:DatabaseConnectionString1.ProviderName %>" 
@@ -28,7 +32,7 @@ public partial class Login : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@password", TextBox2.Text);
             con.Open();
             int s = (int)cmd.ExecuteScalar();
-            if (s == 1)
+            if (s>0)
             {
                 Session["email"] = TextBox1.Text;
                 TextBox1.Text = string.Empty;
@@ -39,7 +43,7 @@ public partial class Login : System.Web.UI.Page
             {
                 TextBox1.Text = string.Empty;
                 TextBox2.Text = string.Empty;
-                Literal1.Text = "Email and Password are invalid!";
+                Response.Write("<script>alert('Email and Password are invalid! Goto kairo....')</script>");
             }
             con.Close();
         }
